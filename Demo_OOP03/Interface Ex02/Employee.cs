@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,39 @@ using System.Threading.Tasks;
 
 namespace Demo_OOP03.Interface_Ex02
 {
+    #region 08
+
+    class EmployeeComparerName : IComparer
+    {
+        public int Compare(object? x, object? y)
+        {
+            Employee e01 = (Employee)x;
+            Employee e02 = (Employee)y;
+
+            if (e01.Name.Length > e02.Name.Length)
+                return 1;
+            else if (e01.Name.Length < e02.Name.Length)
+                return -1;
+            return 0;
+        }
+    }
+
+    class EmployeeComparerSalary : IComparer
+    {
+        public int Compare(object? x, object? y)
+        {
+            Employee e01 = (Employee)x;
+            Employee e02 = (Employee)y;
+
+            if (e01.Salary > e02.Salary)
+                return 1;
+            else if (e01.Salary < e02.Salary)
+                return -1;
+            return 0;
+        }
+    }
+
+    #endregion
     internal class Employee : ICloneable, IComparable
     {
         public int Id { get; set; }
