@@ -18,6 +18,6 @@ namespace Demo_OOP03.Interface_Ex02
             Current = 0;
         }
     }
-    {
-    }
+
+
 }

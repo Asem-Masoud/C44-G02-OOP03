@@ -1,5 +1,6 @@
 ﻿using Demo_OOP03.Interface_Ex01;
 using Demo_OOP03.Interface_Ex02;
+using Demo_OOP03.InterfaceEx03;
 
 namespace Demo_OOP03
 {
@@ -82,37 +83,53 @@ namespace Demo_OOP03
             #region 03 Interface Ex02
 
 
-            //SeriesBy2 seriesBy2 = new SeriesBy2();
-            //Print10Number(seriesBy2);
+            ////SeriesBy2 seriesBy2 = new SeriesBy2();
+            ////Print10Number(seriesBy2);
 
-            //SeriesByThree seriesByThree = new SeriesByThree();
+            ////SeriesByThree seriesByThree = new SeriesByThree();
 
-            //Print10Number(seriesByThree);
+            ////Print10Number(seriesByThree);
 
-            //SeriesByFour seriresByFour = new SeriesByFour();
-            //Print10Number(seriresByFour);
+            ////SeriesByFour seriresByFour = new SeriesByFour();
+            ////Print10Number(seriresByFour);
 
 
-            ////int[] numbers = { 7, 5, 3, 4, 6, 7, 8, 9, 14, };
-            ////Array.Sort(numbers); //Sortng By Asce
-            ////foreach (int item in numbers) 
-            ////{
-            ////    Console.WriteLine(item);
-            ////}
+            //////int[] numbers = { 7, 5, 3, 4, 6, 7, 8, 9, 14, };
+            //////Array.Sort(numbers); //Sortng By Asce
+            //////foreach (int item in numbers) 
+            //////{
+            //////    Console.WriteLine(item);
+            //////}
 
-            Employee[] employees = new Employee[3]
-            {
-                new Employee() {Id =1, Name="Ahmed" , Age=30,Salary=12000 },
-                new Employee() {Id =2, Name="Omar" , Age=27,Salary=13000 },
-                new Employee() {Id =3, Name="Amr" , Age=28,Salary=11000 },
-            };
+            //Employee[] employees = new Employee[3]
+            //{
+            //    new Employee() {Id =1, Name="Ahmed" , Age=30,Salary=12000 },
+            //    new Employee() {Id =2, Name="Omar" , Age=27,Salary=13000 },
+            //    new Employee() {Id =3, Name="Amr" , Age=28,Salary=11000 },
+            //};
 
-            Array.Sort(employees);
-            foreach (Employee item in employees)
-            {
-                Console.WriteLine(item);
-            }
+            //Array.Sort(employees);
+            //foreach (Employee item in employees)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
+            #endregion
+
+            #region 04 Interface Ex03
+
+            //Cars car = new Cars();
+            //car.Speed = 120;
+            //car.Forward();
+
+            //AirPlan airPlan = new AirPlan();
+
+            ////Create ref to call the function
+            //IMovable movable = new Cars();
+            //movable.Forward();
+
+            //IFlyable flyable = airPlan;
+            //flyable.Forward();
 
             #endregion
         }
