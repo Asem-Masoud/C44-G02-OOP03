@@ -305,33 +305,57 @@ namespace Demo_OOP03
 
             #region 06 Built-in Interface - ICloneable
 
-            Employee e01 = new Employee()
-            {
-                Id = 1,
-                Name = "Ahmed",
-                Age = 30,
-                Salary = 12000
-            };
+            //Employee e01 = new Employee()
+            //{
+            //    Id = 1,
+            //    Name = "Ahmed",
+            //    Age = 30,
+            //    Salary = 12000
+            //};
 
-            Employee e02 = new Employee()
-            {
-                Id = 2,
-                Name = "Amr",
-                Age = 28,
-                Salary = 11000
-            };
+            //Employee e02 = new Employee()
+            //{
+            //    Id = 2,
+            //    Name = "Amr",
+            //    Age = 28,
+            //    Salary = 11000
+            //};
 
-            //e02 = e01;    // Shallow Copy
-            //e02 = (Employee) e01.Clone();   // Deep Copy
-            e02 = new Employee(e01);    // Deep copy using copy constructor
+            ////e02 = e01;    // Shallow Copy
+            ////e02 = (Employee) e01.Clone();   // Deep Copy
+            //e02 = new Employee(e01);    // Deep copy using copy constructor
 
-            Console.WriteLine(e01.GetHashCode());
-            Console.WriteLine(e02.GetHashCode());
-            Console.WriteLine(e01);
-            Console.WriteLine(e02);
+            //Console.WriteLine(e01.GetHashCode());
+            //Console.WriteLine(e02.GetHashCode());
+            //Console.WriteLine(e01);
+            //Console.WriteLine(e02);
 
             #endregion
 
+            #region 07 Built-in Interface - ICompareable
+
+            //Employee[] employees =
+            //  [
+            //      new Employee { Id = 1, Name = "Ahmed", Age = 30, Salary = 12000 },
+            //      new Employee { Id = 2, Name = "Omar", Age =  27, Salary = 11000 },
+            //      new Employee { Id = 3, Name = "Ali", Age = 31, Salary = 13000 }
+            //  ];
+
+            ////Array.Sort(employees);
+
+            ////int x = employees[0].CompareTo(employees[1]);
+            ////// +ve : Caller greater than parameter
+            ////// -ve : Caller less than parameter
+            ////// 0   : Caller equal parameter
+
+            ////Console.WriteLine(x);
+
+            //foreach (Employee e in employees)
+            //{
+            //    Console.WriteLine(e);
+            //}
+
+            #endregion
         }
     }
 }
