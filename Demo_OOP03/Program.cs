@@ -1,6 +1,7 @@
 ﻿using Demo_OOP03.Interface_Ex01;
 using Demo_OOP03.Interface_Ex02;
 using Demo_OOP03.InterfaceEx03;
+using System.Text;
 
 namespace Demo_OOP03
 {
@@ -130,6 +131,175 @@ namespace Demo_OOP03
 
             //IFlyable flyable = airPlan;
             //flyable.Forward();
+
+            #endregion
+
+            #region 05 Shallow Copy Vs Deep Copy
+
+
+            // Shallow Copy Vs Deep Copy
+            /* //1. Shallow Copy int[]
+            Console.WriteLine(value: "1. Shallow Copy for int[] ");
+            int[] Arr01 = { 1, 2, 3 };
+            int[] Arr02 = { 4, 5, 6 };
+
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            Arr02 = Arr01; // Shallow Copy
+            // Copy Identity
+            // { 1, 2, 3 } ---> Has Two References Arr01, Arr02
+            // { 4, 5, 6 } ---> UnReachable Object
+
+            Console.WriteLine();
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            // Identity (Address) + Object State [Data]
+
+            Arr02[0] = 100;
+            Console.WriteLine(Arr01[0]);
+            */
+
+
+            /* // 2. Deep Copy for int[]
+            Console.WriteLine(value: "Deep Copy for int[] ");
+
+            int[] Arr01 = { 1, 2, 3 };
+            int[] Arr02 = { 4, 5, 6 };
+
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            Arr02 = (int[])Arr01.Clone();    // Deep Copy
+            // Clone Method will copy the object State of the caller
+            // Assign The New Object To Arr02, Will  Generate new Identity
+
+            Console.WriteLine(    );
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            // Identity (Address) + Object State [Data]
+
+            Arr02[0] = 100;
+            Console.WriteLine(Arr01[0]);
+            */
+
+            /* //3. Shallow Copy for string[]"
+            Console.WriteLine(value: "3. Shallow Copy for string[]");
+            string[] Arr01 = { "Ahmed", "Ali", "Omar" };
+            string[] Arr02 = { "Ziad", "Adel", "Amr" };
+
+
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            //Shallow Copy
+
+            Arr02 = Arr01; // Shallow Copy
+            // Copy Identity
+            // { 1, 2, 3 } ---> Has Two References Arr01, Arr02
+            // { 4, 5, 6 } ---> UnReachable Object
+
+            Console.WriteLine(   );
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            //// Identity (Address) + Object State [Data]
+
+            Arr02[0] += " Ahmed Amin";
+            Console.WriteLine(Arr01[0]);
+            */
+
+            /* //4. Deep Copy for string[] 
+            Console.WriteLine(value: "4. Deep Copy for string[] ");
+            string[] Arr01 = { "Ahmed", "Ali", "Omar" };
+            string[] Arr02 = { "Ziad", "Adel", "Amr" };
+
+
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            Arr02 = (string[])Arr01.Clone(); // 
+            // Copy Identity
+            // { 1, 2, 3 } ---> Has Two References Arr01, Arr02
+            // { 4, 5, 6 } ---> UnReachable Object
+
+            Console.WriteLine(   );
+            Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+            Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+            //// Identity (Address) + Object State [Data]
+
+            Arr02[0] += " Ahmed Amin";
+            Console.WriteLine(Arr01[0]);
+            */
+
+
+            /*  //5. Shallow Copy for StringBuilder[]
+             Console.WriteLine(value: "5. Shallow Copy for StringBuilder[]");
+             StringBuilder[] Arr01 = new StringBuilder[]
+               {
+                  new StringBuilder("Ahmed"),
+                  new StringBuilder("Ali"),
+                  new StringBuilder("Omar")
+               };
+
+             StringBuilder[] Arr02 = new StringBuilder[]
+               {
+                 new StringBuilder("Amr"),
+                 new StringBuilder("Adel"),
+                 new StringBuilder("Ziad")
+               };
+
+
+             Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+             Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+             Arr02 = Arr01;
+
+             Console.WriteLine(   );
+             Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+             Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+             //// Identity (Address) + Object State [Data]
+
+             Arr02[0].Append(" Ahmed Amin");
+             Console.WriteLine(Arr01[0]);
+
+             */
+
+
+            /* //6. Deep Copy for StringBuilder[]
+             Console.WriteLine(value: "6. Deep Copy for StringBuilder[]");
+             StringBuilder[] Arr01 = new StringBuilder[]
+                {
+                       new StringBuilder("Ahmed"),
+                        new StringBuilder("Ali"),
+                        new StringBuilder("Omar")
+                };
+
+             StringBuilder[] Arr02 = new StringBuilder[]
+             {
+                    new StringBuilder("Amr"),
+                   new StringBuilder("Adel"),
+                 new StringBuilder("Ziad")
+              };
+
+
+             Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+             Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+             Arr02 = (StringBuilder[])Arr01.Clone();
+
+             Console.WriteLine($"Arr01: {Arr01.GetHashCode()}");
+             Console.WriteLine($"Arr02: {Arr02.GetHashCode()}");
+
+             //// Identity (Address) + Object State [Data]
+
+             Arr02[0].Append(" Ahmed Amin");
+             Console.WriteLine(Arr01[0]);
+             */
 
             #endregion
         }
