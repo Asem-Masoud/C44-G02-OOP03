@@ -1,4 +1,5 @@
 ﻿using Ass_OOP03.Q1P02;
+using Ass_OOP03.Q2P02;
 
 namespace Ass_OOP03
 {
@@ -61,19 +62,40 @@ namespace Ass_OOP03
 
             #region Q2P02
 
+            IAuthenticationService authService = new BasicAuthenticationService();
 
+            string username = "admin";
+            string password = "admin123";
 
-            #endregion
+            if (authService.AuthenticateUser(username, password))
+            {
+                Console.WriteLine($"User {username} authenticated successfully!");
 
-
-            #region Q3P02
-
-
-
-
-            #endregion
-
-
+                if (authService.AuthorizeUser(username, "Administrator"))
+                {
+                    Console.WriteLine($"User {username} has Administrator privileges.");
+                }
+                else
+                {
+                    Console.WriteLine($"User {username} does not have Administrator privileges.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Authentication failed!");
+            }
         }
+
+        #endregion
+
+
+        #region Q3P02
+
+
+
+
+        #endregion
+
+
     }
 }
