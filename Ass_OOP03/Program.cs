@@ -1,5 +1,6 @@
 ﻿using Ass_OOP03.Q1P02;
 using Ass_OOP03.Q2P02;
+using Ass_OOP03.Q3P02;
 
 namespace Ass_OOP03
 {
@@ -84,18 +85,36 @@ namespace Ass_OOP03
             {
                 Console.WriteLine("Authentication failed!");
             }
+
+
+            #endregion
+
+
+            #region Q3P02
+
+            // إنشاء كائنات من خدمات الإشعارات المختلفة
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
+
+            string recipient = "user@example.com";
+            string message = "Welcome to our service!";
+
+            Console.WriteLine("Sending notifications:");
+            emailService.SendNotification(recipient, message);
+            smsService.SendNotification("123-456-7890", message);
+            pushService.SendNotification("UserDevice123", message);
+
+            Console.WriteLine("\nUsing array of services:");
+            INotificationService[] services = { emailService, smsService, pushService };
+
+            foreach (var service in services)
+            {
+                service.SendNotification(recipient, "Bulk notification message");
+            }
+
+            #endregion
+
         }
-
-        #endregion
-
-
-        #region Q3P02
-
-
-
-
-        #endregion
-
-
     }
 }
