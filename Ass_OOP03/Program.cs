@@ -92,7 +92,6 @@ namespace Ass_OOP03
 
             #region Q3P02
 
-            // إنشاء كائنات من خدمات الإشعارات المختلفة
             INotificationService emailService = new EmailNotificationService();
             INotificationService smsService = new SmsNotificationService();
             INotificationService pushService = new PushNotificationService();
